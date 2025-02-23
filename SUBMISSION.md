@@ -1,0 +1,159 @@
+This assignment involves developing a personal portfolio website using HTML5. The primary goal is to design and build a well-organized, accessible webpage that highlights personal details, educational background, work experience, projects, extracurricular activities, and multimedia content. This assignment was completed using HTML elements, maintaining a clear document structure, and adhering to best practices for accessibility and usability. I built the HTML structure using elements such as header, nav, main, section, article, and footer. The header showcases my name, profile picture, and university, while the nav provides smooth scrolling links. The main content is divided into sections for About Me, Education, Experience (which is displayed in a table), Projects with images, Extracurricular Activities, and multimedia elements like an embedded YouTube video and Google Maps location. I also added a meta viewport tag to ensure the design is responsive.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Defines character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures responsive design -->
+    <meta name="description" content="Personal portfolio of Joey Lee"> <!-- Provides a brief description for SEO -->
+    <meta name="keywords" content="portfolio, web development, student"> <!-- Keywords for search engines -->
+    <meta name="author" content="Joey Lee"> <!-- Specifies the author of the page -->
+    <title>Joey Lee - Portfolio</title> <!-- Title displayed on browser tab -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico"> <!-- Favicon for the website -->
+</head>
+<body>
+    <header>
+        <h1>Joey Lee</h1> <!-- Main heading displaying the name -->
+        <img src="images/profile.jpg" alt="Profile picture of Joey Lee"> <!-- Profile image with alternative text -->
+        <h2>San Francisco State University</h2> <!-- Displays the school name -->
+        <img src="images/SFSU_logo.jpg" alt="San Francisco State University Logo"> <!-- School logo -->
+        <img src="images/hometown.jpg" alt="Image of my hometown"> <!-- Hometown image -->
+    </header>
+
+This is the basic structure of my index.html file.
+
+<nav> <!-- Navigation section -->
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+This section helps users easily navigate between different sections of my portfolio.
+
+<main>
+        <section id="about"> <!-- About section containing a brief introduction -->
+            <h2>About Me</h2>
+            <p>Hello, my name is Joey Lee, and I am an enthusiastic student passionate about web development. I love coding, solving complex problems, and creating innovative projects that bring ideas to life. Exploring different technologies and improving my skills excites me, and I constantly seek opportunities to grow as a developer. My goal is to gain hands-on experience, deepen my understanding of web technologies, and build projects that make an impact. Whether it's front-end design, back-end logic, or full-stack development, I enjoy the challenge of crafting functional and visually appealing applications. Learning new concepts, experimenting with code, and refining my skills are what drive me forward. I am eager to collaborate, take on new challenges, and continue expanding my knowledge in the ever-evolving world of web development.</p>
+        </section>
+        
+        <section id="education"> <!-- Education section displaying academic background -->
+            <h2>Education</h2>
+            <ul>
+                <li>San Francisco State University
+                    <ul>
+                        <li>Major: Computer Science</li>
+                        <li>Expected Graduation: 2027</li>
+                    </ul>
+                </li>
+            </ul>
+            <table border="1"> <!-- Table displaying courses and grades -->
+                <tr>
+                    <th>Course</th>
+                    <th>Grade</th>
+                </tr>
+                <tr>
+                    <td>Data Structures</td>
+                    <td>A</td>
+                </tr>
+                <tr>
+                    <td>Calculus 1</td>
+                    <td>B+</td>
+                </tr>
+            </table>
+        </section>
+        
+        <section id="experience"> <!-- Work experience section -->
+            <h2>Experience</h2>
+            <table border="1"> <!-- Table displaying job history -->
+                <tr>
+                    <th>Position</th>
+                    <th>Company</th>
+                    <th>Dates</th>
+                </tr>
+                <tr>
+                    <td>Crew Member</td>
+                    <td>Calvin Klein</td>
+                    <td>December 1 - Present</td>
+                </tr>
+            </table>
+        </section>
+        
+        <section id="projects"> <!-- Projects section showcasing completed work -->
+            <h2>Projects</h2>
+            <article>
+                <h3>Project 1: BMI Calculator</h3>
+                <img src="images/project3.jpg" alt="Project 1 Screenshot"> <!-- Project image -->
+                <p>This project showcases a movie database that correctly displays showtimes and calculates the runtime.</p>
+            </article>
+        </section>
+        
+        <section id="extracurricular"> <!-- Extracurricular section showcasing additional activities -->
+            <h2>Extracurricular Activities</h2>
+            <article>
+                <h3>Coding Club Member</h3>
+                <p>I actively participate in my university’s coding club, where I collaborate on projects, attend hackathons, and explore emerging technologies.</p>
+            </article>
+            <article>
+                <h3>Freelance Web Development</h3>
+                <p>Outside of my studies, I take on freelance web development projects, building responsive websites for small businesses and personal brands.</p>
+            </article>
+        </section>
+
+This is the main section, which contains the core content of the portfolio website. It includes multiple elements, each representing a different category of information.
+<section id="multimedia"> <!-- Multimedia section containing video and map -->
+            <h2>Multimedia</h2>
+            <div>
+                <!-- Embed YouTube Video -->
+                <iframe 
+                    width="560" 
+                    height="315" 
+                    src="https://www.youtube.com/embed/jNQXAC9IVRw" 
+                    title="Portfolio Introduction" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <br>
+            <div>
+                <!-- Embed Google Maps -->
+                <iframe 
+                    width="600" 
+                    height="450" 
+                    style="border:0;" 
+                    loading="lazy" 
+                    allowfullscreen 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.12667896786!2d-122.4769876!3d37.7249876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7e1234567890%3A0xabcdef1234567890!2sSan+Francisco+State+University!5e0!3m2!1sen!2sus!4v1678298350000">
+                </iframe>
+            </div>
+        </section>
+
+This section integrates multimedia elements.
+
+<section id="contact"> <!-- Contact form allowing users to reach out -->
+            <h2>Contact</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+                
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required><br>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea><br>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+This section allows users to reach out to me by inputting contact information.
+
+
