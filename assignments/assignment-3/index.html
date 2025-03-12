@@ -9,7 +9,7 @@
     <title>Joey Lee - Portfolio</title> <!-- Title displayed on browser tab -->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico"> <!-- Favicon for the website -->
 
-    <!-- Default CSS (Will be replaced by the theme switcher) -->
+    <!-- Default CSS (Will be dynamically updated by theme switcher) -->
     <link id="theme-link" rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
@@ -94,8 +94,24 @@
     </footer>
     
     <!-- Theme Switcher Script -->
-    <script src="theme_switcher.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const themeSelector = document.getElementById("theme-selector");
+            const themeLink = document.getElementById("theme-link");
+
+            // Load saved theme
+            const savedTheme = localStorage.getItem("selectedTheme");
+            if (savedTheme) {
+                themeLink.setAttribute("href", savedTheme);
+                themeSelector.value = savedTheme;
+            }
+
+            themeSelector.addEventListener("change", function () {
+                const selectedTheme = themeSelector.value;
+                themeLink.setAttribute("href", selectedTheme);
+                localStorage.setItem("selectedTheme", selectedTheme);
+            });
+        });
+    </script>
 </body>
 </html>
-
-
