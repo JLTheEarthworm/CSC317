@@ -1,0 +1,71 @@
+/* 
+  AI-Generated CSS (ai-2.css) 
+  Prompt: Inspired by a futuristic, neon-blue UI theme.
+  Colors: Dark background with neon blue highlights.
+  Fonts: Modern sans-serif.
+  UI Elements: Smooth rounded buttons, glowing hover effects, modern nav bar.
+  Layout: Responsive grid-based design, perfect for portfolio projects.
+  
+  Reference Image: https://github.com/JLee529/CSC317/raw/main/assignments/assignment-3/images/image1.png
+*/
+
+/* Global Styles */
+body {
+    background-color: #0d1b2a;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Navigation */
+nav {
+    background: #1b263b;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 10px #00aaff;
+}
+
+nav a {
+    color: #00aaff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2rem;
+    transition: text-shadow 0.3s ease-in-out;
+}
+
+nav a:hover {
+    text-shadow: 0px 0px 15px #00aaff;
+}
+
+/* Sections */
+section {
+    padding: 50px;
+    text-align: center;
+}
+
+/* Buttons */
+button {
+    background: transparent;
+    color: #00aaff;
+    border: 2px solid #00aaff;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s ease;
+}
+
+/* Button Hover Effect */
+button:hover {
+    background: #00aaff;
+    color: black;
+    box-shadow: 0px 0px 15px #00aaff;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background: #1b263b;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0px 0px 10px #00aaff;
+}
