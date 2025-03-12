@@ -9,22 +9,30 @@
     <title>Joey Lee - Portfolio</title> <!-- Title displayed on browser tab -->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico"> <!-- Favicon for the website -->
 
-    <!-- Link to CSS files -->
-    <link rel="stylesheet" href="styles/styles.css">  <!-- Handwritten CSS (default) -->
-    <!-- <link rel="stylesheet" href="styles/ai-1.css"> -->  <!-- AI-Generated CSS (Text Prompt) -->
-    <!-- <link rel="stylesheet" href="styles/ai-2.css"> -->  <!-- AI-Generated CSS (Image Prompt) -->
-    <!-- <link rel="stylesheet" href="styles/hybrid.css"> -->  <!-- Hybrid Version -->
+    <!-- Default CSS (Will be replaced by the theme switcher) -->
+    <link id="theme-link" rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
+    <!-- Theme Switcher -->
+    <div id="theme-switcher">
+        <label for="theme-selector">Select Theme:</label>
+        <select id="theme-selector">
+            <option value="styles/styles.css">Handwritten CSS</option>
+            <option value="styles/ai-1.css">AI-Generated (Text)</option>
+            <option value="styles/ai-2.css">AI-Generated (Image)</option>
+            <option value="styles/hybrid.css">Hybrid Style</option>
+        </select>
+    </div>
+    
     <header>
-        <h1>Joey Lee</h1> <!-- Main heading displaying the name -->
-        <img src="images/profile.jpg" alt="Profile picture of Joey Lee"> <!-- Profile image with alternative text -->
-        <h2>San Francisco State University</h2> <!-- Displays the school name -->
-        <img src="images/SFSU_logo.jpg" alt="San Francisco State University Logo"> <!-- School logo -->
-        <img src="images/hometown.jpg" alt="Image of my hometown"> <!-- Hometown image -->
+        <h1>Joey Lee</h1>
+        <img src="images/profile.jpg" alt="Profile picture of Joey Lee">
+        <h2>San Francisco State University</h2>
+        <img src="images/SFSU_logo.jpg" alt="San Francisco State University Logo">
+        <img src="images/hometown.jpg" alt="Image of my hometown">
     </header>
     
-    <nav> <!-- Navigation section -->
+    <nav>
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#education">Education</a></li>
@@ -35,12 +43,12 @@
     </nav>
     
     <main>
-        <section id="about"> <!-- About section containing a brief introduction -->
+        <section id="about">
             <h2>About Me</h2>
-            <p>Hello, my name is Joey Lee, and I am an enthusiastic student passionate about web development. I love coding, solving complex problems, and creating innovative projects that bring ideas to life. Exploring different technologies and improving my skills excites me, and I constantly seek opportunities to grow as a developer. My goal is to gain hands-on experience, deepen my understanding of web technologies, and build projects that make an impact. Whether it's front-end design, back-end logic, or full-stack development, I enjoy the challenge of crafting functional and visually appealing applications. Learning new concepts, experimenting with code, and refining my skills are what drive me forward. I am eager to collaborate, take on new challenges, and continue expanding my knowledge in the ever-evolving world of web development.</p>
+            <p>Hello, my name is Joey Lee, and I am an enthusiastic student passionate about web development...</p>
         </section>
         
-        <section id="education"> <!-- Education section displaying academic background -->
+        <section id="education">
             <h2>Education</h2>
             <ul>
                 <li>San Francisco State University
@@ -50,48 +58,18 @@
                     </ul>
                 </li>
             </ul>
-            <table border="1"> <!-- Table displaying courses and grades -->
-                <tr>
-                    <th>Course</th>
-                    <th>Grade</th>
-                </tr>
-                <tr>
-                    <td>Data Structures</td>
-                    <td>A</td>
-                </tr>
-                <tr>
-                    <td>Calculus 1</td>
-                    <td>B+</td>
-                </tr>
-            </table>
         </section>
         
-        <section id="experience"> <!-- Work experience section -->
-            <h2>Experience</h2>
-            <table border="1"> <!-- Table displaying job history -->
-                <tr>
-                    <th>Position</th>
-                    <th>Company</th>
-                    <th>Dates</th>
-                </tr>
-                <tr>
-                    <td>Crew Member</td>
-                    <td>Calvin Klein</td>
-                    <td>December 1 - Present</td>
-                </tr>
-            </table>
-        </section>
-        
-        <section id="projects"> <!-- Projects section showcasing completed work -->
+        <section id="projects">
             <h2>Projects</h2>
             <article>
                 <h3>Project 3: Movie Playlist</h3>
-                <img src="images/project3.jpg" alt="Project 1 Screenshot"> <!-- Project image -->
+                <img src="images/project3.jpg" alt="Project 3 Screenshot">
                 <p>This project showcases a movie database that correctly displays showtimes and calculates the runtime.</p>
             </article>
         </section>
         
-        <section id="contact"> <!-- Contact form allowing users to reach out -->
+        <section id="contact">
             <h2>Contact</h2>
             <form action="#" method="post">
                 <label for="name">Name:</label>
@@ -111,9 +89,12 @@
         </section>
     </main>
     
-    <footer> <!-- Footer section containing copyright information -->
+    <footer>
         <p>&copy; 2025 Joey Lee &bull; All Rights Reserved</p>
     </footer>
+    
+    <!-- Theme Switcher Script -->
+    <script src="theme_switcher.js"></script>
 </body>
 </html>
 
