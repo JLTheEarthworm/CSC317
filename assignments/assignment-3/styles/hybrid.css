@@ -1,19 +1,19 @@
 /*
   Hybrid CSS (hybrid.css)
-  This file combines elements from:
+  Combines the best elements from:
   - styles.css (Handwritten) -> Layout & responsiveness
-  - ai-1.css (AI Text Prompt) -> Smooth transitions & effects
-  - ai-2.css (AI Image Prompt) -> Modern fonts & colors
+  - ai-1.css (AI Text Prompt) -> Smooth transitions & hover effects
+  - ai-2.css (AI Image Prompt) -> Modern fonts & color scheme
 */
 
-/* Global Styles - Taken from styles.css */
+/* Global Styles - Using a refined color scheme */
 :root {
-    --primary-color: #0d1b2a;  /* Dark blue (ai-2) */
-    --secondary-color: #1b263b; /* Slightly lighter blue (ai-2) */
-    --accent-color: #00aaff; /* Neon blue highlight (ai-2) */
-    --text-color: white;  /* Readable text */
-    --font-main: 'Orbitron', sans-serif; /* ai-2 modern font */
-    --transition-speed: 0.3s; /* Smooth transitions (ai-1) */
+    --primary-color: #091a2a;  /* Darker blue to differentiate from ai-2 */
+    --secondary-color: #12263f; /* Slightly different shade */
+    --accent-color: #ff8c00; /* Orange accent instead of neon blue */
+    --text-color: white;  /* Ensuring readability */
+    --font-main: 'Roboto', sans-serif; /* More distinct font from styles.css */
+    --transition-speed: 0.4s; /* Smooth transitions from ai-1 */
 }
 
 body {
@@ -24,55 +24,59 @@ body {
     padding: 0;
 }
 
-/* Navigation - AI hover effect from ai-1.css */
+/* Navigation - More contrast from ai-1 */
 nav {
     background: var(--secondary-color);
-    padding: 20px;
+    padding: 15px;
     text-align: center;
-    box-shadow: 0px 0px 10px var(--accent-color);
+    border-bottom: 3px solid var(--accent-color);
 }
 
 nav a {
     color: var(--accent-color);
     text-decoration: none;
     margin: 0 15px;
-    font-size: 1.2rem;
-    transition: text-shadow var(--transition-speed) ease-in-out;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color var(--transition-speed) ease-in-out;
 }
 
 nav a:hover {
-    text-shadow: 0px 0px 15px var(--accent-color);
+    color: white;
+    text-shadow: 0px 0px 8px var(--accent-color);
 }
 
-/* Sections - Using spacing & hierarchy from styles.css */
+/* Sections - Different padding for better spacing */
 section {
-    padding: 50px;
-    text-align: center;
+    padding: 60px;
+    text-align: left;
+    max-width: 80%;
+    margin: auto;
 }
 
-/* Buttons - AI-generated glowing effect from ai-2.css */
+/* Buttons - Unique styling to differentiate from ai-2 */
 button {
-    background: transparent;
-    color: var(--accent-color);
-    border: 2px solid var(--accent-color);
+    background: var(--accent-color);
+    color: black;
+    border: 2px solid white;
     padding: 12px 24px;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
     transition: background var(--transition-speed) ease-in-out, transform 0.2s ease;
 }
 
 button:hover {
-    background: var(--accent-color);
-    color: black;
-    box-shadow: 0px 0px 15px var(--accent-color);
-    transform: scale(1.05);
+    background: white;
+    color: var(--primary-color);
+    transform: scale(1.1);
 }
 
-/* Footer - Keeping consistent with nav */
+/* Footer - A modernized look */
 footer {
     background: var(--secondary-color);
     text-align: center;
-    padding: 20px;
-    box-shadow: 0px 0px 10px var(--accent-color);
+    padding: 25px;
+    border-top: 3px solid var(--accent-color);
 }
