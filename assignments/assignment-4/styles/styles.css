@@ -1,0 +1,146 @@
+
+/* 
+  styles.css - Handwritten CSS for Portfolio 
+  Author: Joey Lee
+  Description: Manually crafted CSS to style a personal portfolio site with responsive design.
+*/
+
+/* ====== CSS Variables (for easy theming) ====== */
+:root {
+    --primary-color: #2a9d8f; /* Main theme color */
+    --secondary-color: #264653; /* Darker contrast */
+    --background-color: #f5f5f5; /* Light neutral background */
+    --text-color: #333; /* Default text color */
+    --button-hover: #e76f51; /* Accent color for button hover */
+}
+
+/* ====== Global Reset (to remove default browser styles) ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* ====== Body Styling (Global Styles) ====== */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* ====== Navigation Bar ====== */
+nav {
+    background: var(--primary-color);
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover effect for nav links */
+nav a:hover {
+    color: var(--button-hover);
+}
+
+/* ====== Sections (General Layout) ====== */
+section {
+    padding: 50px;
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Give alternate background colors to every even section */
+section:nth-child(even) {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* ====== Buttons (Basic Interactivity) ====== */
+button {
+    background: var(--primary-color);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s ease;
+}
+
+/* Hover Effect */
+button:hover {
+    background: var(--button-hover);
+    transform: scale(1.05);
+}
+
+/* ====== Responsive Design (Media Queries) ====== */
+@media (max-width: 768px) {
+    nav {
+        padding: 10px;
+    }
+    
+    nav a {
+        display: block;
+        margin: 10px 0;
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 30px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+/* ====== Footer ====== */
+footer {
+    background: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+.project-card {
+  background-color: #1c1c1c;
+  color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 1rem 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-card img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.project-info {
+  text-align: center;
+}
+
+.project-card .btn {
+  margin-top: 10px;
+  background-color: #f1a33c;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+}
+

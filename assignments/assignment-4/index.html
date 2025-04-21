@@ -1,25 +1,145 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>JavaScript Practice</title>
+    <meta charset="UTF-8"> <!-- Defines character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures responsive design -->
+    <meta name="description" content="Personal portfolio of Joey Lee"> <!-- Provides a brief description for SEO -->
+    <meta name="keywords" content="portfolio, web development, student"> <!-- Keywords for search engines -->
+    <meta name="author" content="Joey Lee"> <!-- Specifies the author of the page -->
+    <title>Joey Lee - Portfolio</title> <!-- Title displayed on browser tab -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico"> <!-- Favicon for the website -->
+
+    <!-- Default CSS (Will be dynamically updated by theme switcher) -->
+    <link id="theme-link" rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-  <h1>JavaScript Week 0 Practice</h1>
-  <button id="greetButton">Click Me!</button>
-  <div id="output"></div>
+    <!-- Theme Switcher -->
+    <div id="theme-switcher">
+        <label for="theme-selector">Select Theme:</label>
+        <select id="theme-selector">
+            <option value="styles/styles.css">Handwritten CSS</option>
+            <option value="styles/ai-1.css">AI-Generated (Text)</option>
+            <option value="styles/ai-2.css">AI-Generated (Image)</option>
+            <option value="styles/hybrid.css">Hybrid Style</option>
+        </select>
+    </div>
+    
+    <header>
+        <h1>Joey Lee</h1>
+        <img src="images/profile.jpg" alt="Profile picture of Joey Lee">
+        <h2>San Francisco State University</h2>
+        <img src="images/SFSU_logo.jpg" alt="San Francisco State University Logo">
+        <img src="images/hometown.jpg" alt="Image of my hometown">
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello, my name is Joey Lee, and I am an enthusiastic student passionate about web development...</p>
+        </section>
+        
+        <section id="education">
+            <h2>Education</h2>
+            <ul>
+                <li>San Francisco State University
+                    <ul>
+                        <li>Major: Computer Science</li>
+                        <li>Expected Graduation: 2027</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        
+        <section id="experience">
+            <h2>Experience</h2>
+            <table border="1"> <!-- Table displaying courses and grades -->
+                <tr>
+                    <th>Course</th>
+                    <th>Grade</th>
+                </tr>
+                <tr>
+                    <td>Data Structures</td>
+                    <td>A</td>
+                </tr>
+                <tr>
+                    <td>Calculus 1</td>
+                    <td>B+</td>
+                </tr>
+            </table>
+        </section>
+        
+        <section id="projects">
+            <h2>Projects</h2>
+            <article>
+                <h3>Project 3: Movie Playlist</h3>
+                <img src="images/project3.png" alt="Project 3 Screenshot">
+                <p>This project showcases a movie database that correctly displays showtimes and calculates the runtime.</p>
+            </article>
+<div class="project-card">
+  <img src="images/calculator.png" alt="Calculator project screenshot">
+  <div class="project-info">
+    <h3>JavaScript Calculator</h3>
+    <p>A responsive calculator with support for basic arithmetic, percentage, and sign toggling, styled like iOS.</p>
+    <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+    <a href="calculator.html" class="btn">View Calculator</a>
+  </div>
+</div>
 
-  <script>
-    const greeting = "JavaScript";
+        </section>
+        
+        <section id="contact">
+            <h2>Contact</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+                
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required><br>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea><br>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Joey Lee &bull; All Rights Reserved</p>
+    </footer>
+    
+    <!-- Theme Switcher Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const themeSelector = document.getElementById("theme-selector");
+            const themeLink = document.getElementById("theme-link");
 
-    const createMessage = (name) => {
-      return `Hello, ${name}!`;
-    };
+            // Load saved theme
+            const savedTheme = localStorage.getItem("selectedTheme");
+            if (savedTheme) {
+                themeLink.setAttribute("href", savedTheme);
+                themeSelector.value = savedTheme;
+            }
 
-    document.getElementById("greetButton").addEventListener("click", () => {
-      document.getElementById("output").textContent = createMessage(greeting);
-    });
-  </script>
+            themeSelector.addEventListener("change", function () {
+                const selectedTheme = themeSelector.value;
+                themeLink.setAttribute("href", selectedTheme);
+                localStorage.setItem("selectedTheme", selectedTheme);
+            });
+        });
+    </script>
 </body>
 </html>
-
-
