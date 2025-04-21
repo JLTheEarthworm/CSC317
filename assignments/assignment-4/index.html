@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Practice</title>
+</head>
+<body>
+  <h1>JavaScript Week 0 Practice</h1>
+  <button id="greetButton">Click Me!</button>
+  <div id="output"></div>
+
+  <script>
+    const greeting = "JavaScript";
+
+    const createMessage = (name) => {
+      return `Hello, ${name}!`;
+    };
+
+    document.getElementById("greetButton").addEventListener("click", () => {
+      document.getElementById("output").textContent = createMessage(greeting);
+    });
+  </script>
+</body>
+</html>
+
+
