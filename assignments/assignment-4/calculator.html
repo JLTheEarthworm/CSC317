@@ -2,49 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JavaScript Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project 4: JavaScript Calculator</title>
   <link rel="stylesheet" href="styles/calculator.css" />
 </head>
 <body>
   <div class="calculator">
-    <div class="display" id="display">0
-      <div id="memory-indicator" style="position: absolute; top: 8px; right: 12px; color: #ff0; font-weight: bold;"></div>
-    </div>
+    <div class="calculator-display" id="display">0</div>
+    <div class="calculator-buttons">
+      <button class="btn function" data-action="clear">AC</button>
+      <button class="btn function" data-action="sign">+/-</button>
+      <button class="btn function" data-action="percent">%</button>
+      <button class="btn operator" data-action="divide">÷</button>
 
-    <div class="buttons">
+      <button class="btn" data-action="7">7</button>
+      <button class="btn" data-action="8">8</button>
+      <button class="btn" data-action="9">9</button>
+      <button class="btn operator" data-action="multiply">×</button>
 
-      <!-- Core Calculator Buttons -->
-      <button data-action="clear">AC</button>
-      <button data-action="sign">+/-</button>
-      <button data-action="percent">%</button>
-      <button data-action="/">÷</button>
+      <button class="btn" data-action="4">4</button>
+      <button class="btn" data-action="5">5</button>
+      <button class="btn" data-action="6">6</button>
+      <button class="btn operator" data-action="subtract">−</button>
 
-      <button data-number="7">7</button>
-      <button data-number="8">8</button>
-      <button data-number="9">9</button>
-      <button data-action="*">×</button>
+      <button class="btn" data-action="1">1</button>
+      <button class="btn" data-action="2">2</button>
+      <button class="btn" data-action="3">3</button>
+      <button class="btn operator" data-action="add">+</button>
 
-      <button data-number="4">4</button>
-      <button data-number="5">5</button>
-      <button data-number="6">6</button>
-      <button data-action="-">−</button>
-
-      <button data-number="1">1</button>
-      <button data-number="2">2</button>
-      <button data-number="3">3</button>
-      <button data-action="+">+</button>
-
-      <button data-number="0">0</button>
-      <button data-number=".">.</button>
-      <button data-action="equals">=</button>
+      <button class="btn zero" data-action="0">0</button>
+      <button class="btn" data-action="decimal">.</button>
+      <button class="btn operator" data-action="equals">=</button>
     </div>
   </div>
 
-  <p style="text-align: center; margin-top: 20px;">
-    <a href="index.html">← Back to Portfolio</a>
-  </p>
-
+  <a class="back-link" href="index.html">← Back to Portfolio</a>
   <script src="scripts/calculator.js"></script>
 </body>
 </html>
+
