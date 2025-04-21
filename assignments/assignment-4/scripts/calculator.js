@@ -71,7 +71,6 @@ document.querySelectorAll("[data-number]").forEach(btn => {
   btn.addEventListener("click", () => appendNumber(btn.textContent));
 });
 
-
 document.querySelectorAll("[data-action='operator']").forEach(btn => {
   btn.addEventListener("click", () => chooseOperator(btn.textContent));
 });
