@@ -1,65 +1,46 @@
-let current = '';
-let operator = '';
-let firstOperand = null;
-let memory = 0;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript Calculator</title>
+  <link rel="stylesheet" href="styles/calculator.css" />
+</head>
+<body>
+  <div class="calculator">
+    <div class="display" id="display">0</div>
 
-const display = document.getElementById("display");
-const memoryIndicator = document.getElementById("memory-indicator");
+    <div class="buttons">
+      <button data-action="clear">AC</button>
+      <button data-action="sign">+/-</button>
+      <button data-action="percent">%</button>
+      <button data-action="/">÷</button>
 
-function updateDisplay() {
-  display.textContent = current || '0';
-  memoryIndicator.textContent = memory !== 0 ? 'M' : '';
-}
+      <button>7</button>
+      <button>8</button>
+      <button>9</button>
+      <button data-action="*">×</button>
 
-function clear() {
-  current = '';
-  operator = '';
-  firstOperand = null;
-  updateDisplay();
-}
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button data-action="-">−</button>
 
-document.querySelectorAll("button").forEach(button => {
-  const action = button.dataset.action;
-  const value = button.textContent;
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button data-action="+">+</button>
 
-  button.addEventListener("click", () => {
-    switch (action) {
-      case "mc":
-        memory = 0;
-        updateDisplay();
-        break;
-      case "mr":
-        current = memory.toString();
-        updateDisplay();
-        break;
-      case "m-plus":
-        memory += parseFloat(current || "0");
-        updateDisplay();
-        break;
-      case "m-minus":
-        memory -= parseFloat(current || "0");
-        updateDisplay();
-        break;
-      case "clear":
-        clear();
-        break;
-      case "sign":
-        if (current) current = (parseFloat(current) * -1).toString();
-        updateDisplay();
-        break;
-      case "percent":
-        if (current) current = (parseFloat(current) / 100).toString();
-        updateDisplay();
-        break;
-      case "decimal":
-        if (!current.includes(".")) current += ".";
-        updateDisplay();
-        break;
-      case "equals":
-        if (operator && firstOperand !== null) {
-          const secondOperand = parseFloat(current);
-          switch (operator) {
-            case "+": current = (firstOperand + secondOperand).toString(); break;
-            case "-": current = (firstOperand - secondOperand).toString(); break;
-            case "*": current = (firstOperand * secondOperand).toString(); break;
-            case "/": current = secondOperand !== 0 ? (firstOperand / secondOperand).
+      <button>0</button>
+      <button data-action="decimal">.</button>
+      <button data-action="equals">=</button>
+    </div>
+  </div>
+
+  <p style="text-align: center; margin-top: 20px;">
+    <a href="index.html">← Back to Portfolio</a>
+  </p>
+
+  <script src="scripts/calculator.js"></script>
+</body>
+</html>
